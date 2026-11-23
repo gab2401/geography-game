@@ -1,0 +1,45 @@
+
+/* Layout principale */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 24px;
+  text-align: center;
+}
+
+/* Titolo del gioco */
+.app h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 16px 0;
+}
+
+/* Descrizione */
+.app p {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+/* Contenitore della mappa */
+.map-wrapper {
+  width: 100%;
+  height: 75vh;
+  min-height: 450px;
+
+  border: 2px solid #283747;
+  border-radius: 12px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+/* Leaflet */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}

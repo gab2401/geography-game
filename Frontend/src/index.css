@@ -1,0 +1,32 @@
+
+/* Reset globale */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Elemento principale della pagina */
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* Corpo della pagina */
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #f4f1e8;
+  color: #1d2939;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Contenitore React */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
