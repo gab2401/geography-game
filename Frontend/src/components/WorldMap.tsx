@@ -4,7 +4,11 @@ import type { FeatureCollection } from "geojson";
 import type { Layer } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-function WorldMap() {
+type WorldMapProps = {
+    onCountrySelect: (country: string) => void;
+};
+
+function WorldMap({ onCountrySelect }: WorldMapProps) {
     const [countries, setCountries] =
         useState<FeatureCollection | null>(null); // useState e' inizializzato a null per indicare che i dati non sono ancora stati caricati
 
@@ -29,7 +33,10 @@ function WorldMap() {
     ) {
         layer.on("click", () => {
             const name = feature.properties?.name ?? "Sconosciuto";
+
             setSelectedCountry(name);
+
+            onCountrySelect(name);
         });
     }
 

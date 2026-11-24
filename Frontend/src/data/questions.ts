@@ -1,28 +1,56 @@
+export type Rarity =
+    | "common"
+    | "uncommon"
+    | "rare"
+    | "legendary";
+
+export type CountryAnswer = {
+    country: string;
+    rarity: Rarity;
+    points: number;
+};
+
 export type Question = {
     id: number;
     text: string;
-    correctCountry: string;
-    points: number;
+    answers: CountryAnswer[];
 };
 
 export const questions: Question[] = [
     {
         id: 1,
-        text: "Quale Paese ha Roma come capitale?",
-        correctCountry: "Italy",
-        points: 100
-    },
-    {
-        id: 2,
-        text: "Quale Paese ha Berlino come capitale?",
-        correctCountry: "Germany",
-        points: 100
-    },
-    {
-        id: 3,
-        text: "Quale Paese ha Tokyo come capitale?",
-        correctCountry: "Japan",
-        points: 100
+        text: "Seleziona un Paese confinante con l'Italia",
+        answers: [
+            {
+                country: "France",
+                rarity: "common",
+                points: 25
+            },
+            {
+                country: "Switzerland",
+                rarity: "uncommon",
+                points: 50
+            },
+            {
+                country: "Austria",
+                rarity: "uncommon",
+                points: 50
+            },
+            {
+                country: "Slovenia",
+                rarity: "rare",
+                points: 75
+            },
+            {
+                country: "San Marino",
+                rarity: "legendary",
+                points: 100
+            },
+            {
+                country: "Vatican",
+                rarity: "legendary",
+                points: 100
+            }
+        ]
     }
 ];
-

@@ -1,0 +1,34 @@
+
+.answer-feedback {
+    padding: 16px;
+    margin: 16px 0;
+    border: 2px solid;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.common {
+    color: #64748b;
+    background-color: #f1f5f9;
+}
+
+.uncommon {
+    color: #0369a1;
+    background-color: #e0f2fe;
+}
+
+.rare {
+    color: #7e22ce;
+    background-color: #f3e8ff;
+}
+
+.legendary {
+    color: #a16207;
+    background-color: #fef3c7;
+}
+
+.incorrect {
+    color: #b91c1c;
+    background-color: #fee2e2;
+}
