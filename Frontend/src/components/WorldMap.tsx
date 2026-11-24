@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import type { FeatureCollection } from "geojson";
@@ -7,7 +6,7 @@ import "leaflet/dist/leaflet.css";
 
 function WorldMap() {
     const [countries, setCountries] =
-        useState<FeatureCollection | null>(null);
+        useState<FeatureCollection | null>(null); // useState e' inizializzato a null per indicare che i dati non sono ancora stati caricati
 
     const [selectedCountry, setSelectedCountry] =
         useState<string | null>(null);
